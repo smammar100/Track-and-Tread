@@ -14,21 +14,21 @@ type StoriesProps = {
 
 const defaultArticles: Article[] = [
   {
-    title: "A Sneaker Designed for the Long Run",
+    title: "A Sneaker Designed for the Long\u00A0Run",
     description:
-      "We break down the technology behind our newest long-distance trainer.",
+      "We break down the technology behind our newest long-distance\u00A0trainer.",
     image: "/images/products/insta-1.png",
   },
   {
-    title: "Why Rest Days Boost Performance",
+    title: "Why Rest Days Boost\u00A0Performance",
     description:
-      "Discover why doing nothing is sometimes the most productive thing for your body.",
+      "Discover why doing nothing is sometimes the most productive thing for your\u00A0body.",
     image: "/images/products/insta-2.png",
   },
   {
-    title: "Fueling Up: What to Eat Before You Train",
+    title: "Fueling Up: What to Eat Before You\u00A0Train",
     description:
-      "The right foods to boost energy, enhance focus, and sustain stamina.",
+      "The right foods to boost energy, enhance focus, and sustain\u00A0stamina.",
     image: "/images/products/insta-3.png",
   },
 ]
@@ -63,7 +63,7 @@ function Stories({ articles = defaultArticles, className }: StoriesProps) {
             className={`flex flex-col gap-4 lg:gap-6 p-4 lg:p-6 ${i < articles.length - 1 ? "lg:border-r border-black" : ""} ${i > 0 ? "border-t lg:border-t-0 border-black" : ""}`}
           >
             <h4 className="lg:h2 tracking-[-0.04em]">{article.title}</h4>
-            <p className="body-lg lg:body-xl text-black">{article.description}</p>
+            <p className="body-lg lg:body-xl text-black max-w-[65ch]">{article.description}</p>
             <div>
               <Button variant="dark" size="default">
                 Read More

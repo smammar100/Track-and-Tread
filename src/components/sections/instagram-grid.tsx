@@ -30,8 +30,8 @@ function InstagramGrid({
     <section className={className}>
       {/* Section Header */}
       <div className="flex flex-col gap-2 py-6 lg:py-10 px-4 lg:px-6">
-        <h2>Follow Us on Instagram</h2>
-        <a href="https://instagram.com/trackandtread" target="_blank" rel="noopener noreferrer" className="h5 lg:h4 tracking-[-0.04em] text-[#969696] transition-colors hover:text-[#623cea] active:opacity-50">{handle}</a>
+        <h2>Follow Us on&nbsp;Instagram</h2>
+        <a href="https://instagram.com/trackandtread" target="_blank" rel="noopener noreferrer" className="h5 lg:h4 tracking-[-0.04em] text-[#969696] underline cursor-pointer transition-colors hover:text-[#623cea] active:opacity-50">{handle}</a>
       </div>
 
       {/* Image Grid */}

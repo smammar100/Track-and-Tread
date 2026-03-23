@@ -134,7 +134,7 @@ export default function Home() {
       <main className="flex-1 flex flex-col">
         {/* Hero */}
         <Hero
-          headline="Limited Edition Release: Where Style Meets Utility"
+          headline="Limited Edition Release: Where Style Meets&nbsp;Utility"
           buttonText="View Collection"
           backgroundImage="/images/promo-shoe.jpg"
         />

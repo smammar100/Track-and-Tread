@@ -104,9 +104,9 @@ function ProductCarousel({ title, products, className }: ProductCarouselProps) {
                 </div>
                 {/* Price */}
                 <div className="flex items-end gap-2">
-                  <p className="h5 lg:h4 tracking-[-0.04em]">{product.price}</p>
+                  <p className="h5 lg:h4 tracking-[-0.04em] tabular-nums">{product.price}</p>
                   {product.compareAtPrice && (
-                    <p className="body-lg lg:body-xl text-[#969696] line-through tracking-[-0.04em] pb-px lg:pb-0.5">
+                    <p className="body-lg lg:body-xl text-[#969696] line-through tracking-[-0.04em] pb-px lg:pb-0.5 tabular-nums">
                       {product.compareAtPrice}
                     </p>
                   )}

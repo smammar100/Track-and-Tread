@@ -45,7 +45,7 @@ function FormBanner({ className }: { className?: string }) {
       )}
     >
       <p className="body-lg lg:body-xl whitespace-normal lg:whitespace-nowrap">
-        Be the first to know about new drops and exclusive offers
+        Be the first to know about new drops and exclusive&nbsp;offers
       </p>
 
       <div className="flex flex-col gap-4 w-full lg:flex-row lg:items-center lg:w-auto lg:shrink-0">

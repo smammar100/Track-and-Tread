@@ -96,8 +96,7 @@ export default function MobileNav({ open, onClose }: MobileNavProps) {
               <div className="border-t border-black" />
               <div className="flex items-center gap-4 px-4 py-6">
                 <p className="flex-1 body-md tracking-[-0.64px]">
-                  Your new training partner has arrived. Lightweight. Durable.
-                  Powerful.
+                  Your new training partner has arrived. Lightweight. Durable.&nbsp;Powerful.
                 </p>
                 <ArrowTopRight className="size-6 shrink-0" />
               </div>
@@ -129,7 +128,7 @@ export default function MobileNav({ open, onClose }: MobileNavProps) {
           {/* Create Account */}
           <div className="flex flex-col gap-4 items-center w-full">
             <p className="body-md text-[#969696] text-center w-full">
-              Don&apos;t have an account?
+              Don&rsquo;t have an&nbsp;account?
             </p>
             <button
               type="button"

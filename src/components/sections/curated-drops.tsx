@@ -28,14 +28,9 @@ function CuratedDrops({ className }: CuratedDropsProps) {
 
         {/* Top-right: Shop Men */}
         <div
-          className="relative aspect-square bg-[#d5d5d5] bg-cover bg-center flex items-center justify-center border-t lg:border-t-0 lg:border-b border-black"
+          className="relative aspect-square bg-[#d5d5d5] bg-cover bg-center border-t lg:border-t-0 lg:border-b border-black"
           style={{ backgroundImage: "url(/images/products/shop-men.png)" }}
-        >
-          <Button variant="default" size="default">
-            Shop Men
-            <ArrowTopRight className="size-[26px]" />
-          </Button>
-        </div>
+        />
 
         {/* Bottom-left: Image */}
         <div
@@ -46,9 +41,9 @@ function CuratedDrops({ className }: CuratedDropsProps) {
         {/* Bottom-right: Content */}
         <div className="flex flex-col gap-6 justify-center p-4 lg:p-6 border-t lg:border-t-0 border-black">
           <div className="flex flex-col gap-4">
-            <h3>Built for Every Rep</h3>
-            <p className="body-lg lg:body-xl text-black">
-              From warm-ups to max sets, our training collection delivers comfort, support, and style that keeps up with your grind.
+            <h3>Built for Every&nbsp;Rep</h3>
+            <p className="body-lg lg:body-xl text-black max-w-[65ch]">
+              From warm-ups to max sets, our training collection delivers comfort, support, and style that keeps up with your&nbsp;grind.
             </p>
           </div>
           <Button variant="dark" size="default">
