@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowTopRight } from "@/components/icons"
 
@@ -49,10 +50,18 @@ function Stories({ articles = defaultArticles, className }: StoriesProps) {
             key={`img-${i}`}
             className={`overflow-hidden border-b border-black ${i < articles.length - 1 ? "lg:border-r" : ""} ${i > 0 ? "border-t lg:border-t-0" : ""}`}
           >
-            <div
-              className="w-full h-full aspect-[4/3] lg:h-[640px] bg-[#c5c5c5] bg-cover bg-center"
-              style={article.image ? { backgroundImage: `url(${article.image})` } : undefined}
-            />
+            <div className="relative w-full aspect-[4/3] lg:h-[640px] bg-[#c5c5c5]">
+              {article.image && (
+                <Image
+                  src={article.image}
+                  alt={article.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-cover object-center"
+                  loading="lazy"
+                />
+              )}
+            </div>
           </div>
         ))}
 

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowTopRight } from "@/components/icons"
 
@@ -17,10 +18,17 @@ function CuratedDrops({ className }: CuratedDropsProps) {
       <div className="grid grid-cols-1 lg:grid-cols-2 border-t border-black">
         {/* Top-left: Shop Women */}
         <div
-          className="relative aspect-square bg-[#e5e5e5] bg-cover bg-center flex items-center justify-center lg:border-r lg:border-b border-black"
-          style={{ backgroundImage: "url(/images/products/shop-women.png)" }}
+          className="relative aspect-square bg-[#e5e5e5] flex items-center justify-center lg:border-r lg:border-b border-black overflow-hidden"
         >
-          <Button variant="default" size="default">
+          <Image
+            src="/images/products/shop-women.png"
+            alt="Shop Women"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover object-center"
+            loading="lazy"
+          />
+          <Button variant="default" size="default" className="relative z-10">
             Shop Women
             <ArrowTopRight className="size-[26px]" />
           </Button>
@@ -28,15 +36,31 @@ function CuratedDrops({ className }: CuratedDropsProps) {
 
         {/* Top-right: Shop Men */}
         <div
-          className="relative aspect-square bg-[#d5d5d5] bg-cover bg-center border-t lg:border-t-0 lg:border-b border-black"
-          style={{ backgroundImage: "url(/images/products/shop-men.png)" }}
-        />
+          className="relative aspect-square bg-[#d5d5d5] border-t lg:border-t-0 lg:border-b border-black overflow-hidden"
+        >
+          <Image
+            src="/images/products/shop-men.png"
+            alt="Shop Men"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover object-center"
+            loading="lazy"
+          />
+        </div>
 
         {/* Bottom-left: Image */}
         <div
-          className="aspect-square bg-[#ccc] bg-cover bg-center border-t lg:border-t-0 lg:border-r border-black"
-          style={{ backgroundImage: "url(/images/products/built-for-every-rep.png)" }}
-        />
+          className="relative aspect-square bg-[#ccc] border-t lg:border-t-0 lg:border-r border-black overflow-hidden"
+        >
+          <Image
+            src="/images/products/built-for-every-rep.png"
+            alt="Built for Every Rep"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover object-center"
+            loading="lazy"
+          />
+        </div>
 
         {/* Bottom-right: Content */}
         <div className="flex flex-col gap-6 justify-center p-4 lg:p-6 border-t lg:border-t-0 border-black">

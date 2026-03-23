@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useCallback } from "react"
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { ArrowLeft, ArrowRight } from "@/components/icons"
 import { Badge } from "@/components/ui/badge"
@@ -57,14 +58,17 @@ function ProductCarousel({ title, products, className }: ProductCarouselProps) {
               {i > 0 && <div className="w-px bg-black shrink-0" />}
               <div className="relative flex-1 min-w-0 aspect-square lg:h-[450px] bg-[#f2f2f2] overflow-hidden">
                 {product.image && (
-                  <img
+                  <Image
                     src={product.image}
                     alt={product.name}
-                    className="absolute inset-0 w-full h-full object-contain"
+                    fill
+                    sizes="(max-width: 1024px) 50vw, 20vw"
+                    className="object-contain"
+                    loading="lazy"
                   />
                 )}
                 {/* Badges */}
-                <div className="absolute top-2 left-2 flex flex-col gap-1">
+                <div className="absolute top-2 left-2 flex flex-col gap-1 z-10">
                   {product.badge && (
                     <Badge color="purple">{product.badge}</Badge>
                   )}

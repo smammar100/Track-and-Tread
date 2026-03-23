@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowTopRight } from "@/components/icons"
 
@@ -31,10 +32,19 @@ function ShopByCategory({ categories = defaultCategories, className }: ShopByCat
           <div key={cat.label} className="contents">
             {i > 0 && <div className="w-full h-px lg:w-px lg:h-auto bg-black shrink-0" />}
             <div
-              className="relative flex-1 aspect-square bg-[#d5d5d5] bg-cover bg-center flex items-center justify-center"
-              style={cat.image ? { backgroundImage: `url(${cat.image})` } : undefined}
+              className="relative flex-1 aspect-square bg-[#d5d5d5] flex items-center justify-center overflow-hidden"
             >
-              <Button variant="default" size="default">
+              {cat.image && (
+                <Image
+                  src={cat.image}
+                  alt={cat.label}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-cover object-center"
+                  loading="lazy"
+                />
+              )}
+              <Button variant="default" size="default" className="relative z-10">
                 {cat.label}
                 <ArrowTopRight className="size-[26px]" />
               </Button>

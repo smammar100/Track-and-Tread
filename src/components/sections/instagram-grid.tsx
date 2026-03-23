@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useCallback } from "react"
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { ArrowLeft, ArrowRight } from "@/components/icons"
 
@@ -39,10 +40,18 @@ function InstagramGrid({
         {visibleImages.map((img, i) => (
           <div key={i} className="contents">
             {i > 0 && <div className="w-full h-px lg:w-px lg:h-auto bg-black shrink-0" />}
-            <div
-              className="flex-1 aspect-square bg-[#c5c5c5] bg-cover bg-center"
-              style={img ? { backgroundImage: `url(${img})` } : undefined}
-            />
+            <div className="relative flex-1 aspect-square bg-[#c5c5c5] overflow-hidden">
+              {img && (
+                <Image
+                  src={img}
+                  alt={`Instagram post ${i + 1}`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 25vw"
+                  className="object-cover object-center"
+                  loading="lazy"
+                />
+              )}
+            </div>
           </div>
         ))}
       </div>

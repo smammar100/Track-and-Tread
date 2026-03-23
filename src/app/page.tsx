@@ -1,14 +1,28 @@
+import dynamic from "next/dynamic"
 import Banner from "@/components/banner"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Hero } from "@/components/sections/hero"
 import { ProductCarousel, type Product } from "@/components/sections/product-carousel"
-import { CuratedDrops } from "@/components/sections/curated-drops"
-import { ShopByCategory } from "@/components/sections/shop-by-category"
-import { Stories } from "@/components/sections/stories"
-import { Testimonials } from "@/components/sections/testimonials"
-import { InstagramGrid } from "@/components/sections/instagram-grid"
 import { ScrollReveal } from "@/components/ui/scroll-reveal"
+
+/* ─── Lazy-loaded below-the-fold sections ─── */
+
+const CuratedDrops = dynamic(
+  () => import("@/components/sections/curated-drops").then((m) => ({ default: m.CuratedDrops })),
+)
+const ShopByCategory = dynamic(
+  () => import("@/components/sections/shop-by-category").then((m) => ({ default: m.ShopByCategory })),
+)
+const Stories = dynamic(
+  () => import("@/components/sections/stories").then((m) => ({ default: m.Stories })),
+)
+const Testimonials = dynamic(
+  () => import("@/components/sections/testimonials").then((m) => ({ default: m.Testimonials })),
+)
+const InstagramGrid = dynamic(
+  () => import("@/components/sections/instagram-grid").then((m) => ({ default: m.InstagramGrid })),
+)
 
 /* ─── Product Data ─── */
 
